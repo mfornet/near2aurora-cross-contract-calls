@@ -1,0 +1,15 @@
+[package]
+name = "near-proxy"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+near-sdk = "4.0.0"
+borsh = "0.9.3"
+hex = "0.4.3"
+ethabi = "17.1.0"
+getrandom = { version = "0.2", features = ["js"] }
