@@ -6,6 +6,7 @@ contract StatusMessage {
 
     /// Status message per user. User can be an Aurora address or NEAR Account Id
     mapping(string => string) public status;
+
     /// Set of all users registered in the system.
     mapping(string => bool) public seen;
     /// List of all users registered in the system. Useful for enumeration.

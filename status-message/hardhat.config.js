@@ -2,7 +2,7 @@ require("@nomicfoundation/hardhat-toolbox");
 const { keccak256 } = require("ethers/lib/utils");
 const { task } = require("hardhat/config");
 
-const statusMessageAddress = '0xf60D3c320297Ad056B67a33f7fFC57C9c5D5f241';
+const statusMessageAddress = '';
 
 task("deploy", "Deploy contract").addParam("nearProxyAccountId").setAction(async (taskArgs) => {
   const address = '0x' + keccak256(Buffer.from(taskArgs.nearProxyAccountId)).slice(26);
@@ -48,11 +48,11 @@ module.exports = {
   networks: {
     aurora: {
       url: "https://mainnet.aurora.dev/",
-      accounts: [] // TODO
+      accounts: ['0x1311143f626d916df89a3f8829146fe1c606b6efced2901448eff84e4853ca56']
     },
     auroraTestnet: {
       url: "https://testnet.aurora.dev",
-      accounts: [] // TODO
+      accounts: ['0x1311143f626d916df89a3f8829146fe1c606b6efced2901448eff84e4853ca56']
     }
   }
 };
